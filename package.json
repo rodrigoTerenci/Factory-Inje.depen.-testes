@@ -20,5 +20,8 @@
   "homepage": "https://github.com/rodrigoTerenci/dfa#readme",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "mocha": "^9.0.3"
   }
 }
