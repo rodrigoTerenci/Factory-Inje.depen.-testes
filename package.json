@@ -1,0 +1,24 @@
+{
+  "name": "dfa",
+  "version": "1.0.0",
+  "description": "daf",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodrigoTerenci/dfa.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rodrigoTerenci/dfa/issues"
+  },
+  "homepage": "https://github.com/rodrigoTerenci/dfa#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
