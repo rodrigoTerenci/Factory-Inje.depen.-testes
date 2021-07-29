@@ -8,7 +8,7 @@ function createCore(configuration={}){
         function start(){
             webServer.start()
             database.start()
-            console.log('Conecções Estabelecidas...')
+           // console.log('Conecções Estabelecidas...')
         }
         function stop(){
             console.log('Desconectando-se ....')

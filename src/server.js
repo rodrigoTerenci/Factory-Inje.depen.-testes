@@ -18,7 +18,7 @@ function createServer(){
   }
   function stop(){
     console.log("SERVER PARADO...")
-    server.close()
+    //server.close()
     
   }
   return{
