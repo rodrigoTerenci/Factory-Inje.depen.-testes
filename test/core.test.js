@@ -1,6 +1,16 @@
-import { text } from "express";
+import { text } from "express"
 import createCore from "../src/core.js"
-import expect from 'expect.js'
+//import expect from 'expect.js'
+import {describe, expect, test} from '@jest/globals'
+import isNode from 'detect-node'
+
+export async function analyticsLogEvents(event, params) {
+  if (!isNode) {
+    const firebase = await import('firebase/app')
+    await import('firebase/analytics')
+    firebase.default.analytics().logEvent(event, params)
+  }
+}
 
 function createMock(){
     function start(){
@@ -17,15 +27,16 @@ function createMock(){
 }
 
 describe('Core quando importado', () =>{
-    it('deve ter o método #start e #stop',()=>{
-        const core = createCore()
+   it('deve ter o método #start e #stop',()=>{
+
+    const core = createCore()
         expect(core).to.have.property('start')
         expect(core).to.have.property('stop')
     });
 });
 
 describe('Core quando incializado', ()=> {
-    it('não deve retornar erros',() => {
+   it('não deve retornar erros',() => {
         const databaseMock = createMock()
         const webserverMock = createMock()
         
