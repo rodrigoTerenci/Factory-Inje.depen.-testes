@@ -1,8 +1,8 @@
-import createCore from "./core.js"
-var fs = require('fs');
-var src = fs.readFileSync(__dirname + '/foo.txt', 'utf8');
+import createCore from './core.js'
+//var fs = require('fs');
+//var src = fs.readFileSync(__dirname + '/foo.txt', 'utf8');
 
-module.exports = function (x) { return src.replace(x, 'zzz') };
+//module.exports = function (x) { return src.replace(x, 'zzz') };
 
 
 const core = createCore()

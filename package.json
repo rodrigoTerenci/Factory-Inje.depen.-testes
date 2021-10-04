@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "daf",
   "main": "index.js",
+  "type": "module",
   "browser": {
     "fs": "level-fs-browser"
   },
   "scripts": {
     "test": "jest",
-    "start": "node index.js"
+    "start": "node ./src/index.js"
   },
   "repository": {
     "type": "git",
