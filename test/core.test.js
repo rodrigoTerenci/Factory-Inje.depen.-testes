@@ -48,7 +48,7 @@ describe('Core quando incializado', ()=> {
         expect(()=> {
             core.start()
             core.stop()
-        })
+        }).not.toThrowError()
     });
 });
 /***************Documetação usadas*************
