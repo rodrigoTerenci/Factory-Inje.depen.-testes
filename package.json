@@ -4,6 +4,11 @@
   "description": "daf",
   "main": "index.js",
   "type": "module",
+  "jest": {
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
+  },
   "browser": {
     "fs": "level-fs-browser"
   },
@@ -26,6 +31,8 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.16.11",
+    "babel-jest": "^27.5.1",
     "jest": "^27.0.6",
     "mocha": "^9.0.3"
   }

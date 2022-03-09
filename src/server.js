@@ -14,11 +14,10 @@ function createServer(){
 
       app.use(express.static('.'))
       server.listen(port)
-    
   }
   function stop(){
     console.log("SERVER PARADO...")
-    //server.close()
+    server.close()
     
   }
   return{

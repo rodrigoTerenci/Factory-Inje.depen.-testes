@@ -1,8 +1,8 @@
-import { text } from "express"
-import createCore from "../src/core.js"
+//import { text } from "express"
+import createCore from '../src/core.js'
 //import expect from 'expect.js'
 import {describe, expect, test} from '@jest/globals'
-import isNode from 'detect-node'
+/*import isNode from 'detect-node'
 
 export async function analyticsLogEvents(event, params) {
   if (!isNode) {
@@ -10,7 +10,7 @@ export async function analyticsLogEvents(event, params) {
     await import('firebase/analytics')
     firebase.default.analytics().logEvent(event, params)
   }
-}
+}*/
 
 function createMock(){
     function start(){
@@ -30,17 +30,17 @@ describe('Core quando importado', () =>{
    it('deve ter o método #start e #stop',()=>{
 
     const core = createCore()
-        expect(core).to.have.property('start')
-        expect(core).to.have.property('stop')
+        expect(core).toHaveProperty('start')
+        expect(core).toHaveProperty('stop')
     });
-});
+})
 
 describe('Core quando incializado', ()=> {
    it('não deve retornar erros',() => {
         const databaseMock = createMock()
         const webserverMock = createMock()
         
-        /*FORÇANDO O TESTE DAR CERTO*/
+        //FORÇANDO O TESTE DAR CERTO
         const core = createCore({
             database: databaseMock,
             webserver: webserverMock
@@ -48,7 +48,7 @@ describe('Core quando incializado', ()=> {
         expect(()=> {
             core.start()
             core.stop()
-        }).not.throwError();
+        })
     });
 });
 /***************Documetação usadas*************
